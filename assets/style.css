@@ -301,7 +301,7 @@ li#more-inf:hover > #sub-nav {
     width: 185px!important;
 }
 
-#content img {
+#content img#map-img {
     width: 100%;
     display: block;
     margin-top: 120px;

@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 html {
-    font-family: Verdana,sans-serif;
+    font-family: sans-serif;
 }
 li {list-style: none}
 a {text-decoration: none; font-size: 15px;}
 p {font-size: 15px;}
 h3 {font-weight: 100;font-size: 30px;}
 /*----------1. Header----------*/
-#header {
+#main-block .header {
     height: 46px;
     background-color: black;
     box-shadow: 0 0 3px 1px rgb(54, 54, 54);
@@ -21,20 +21,20 @@ h3 {font-weight: 100;font-size: 30px;}
     right: 0;
     z-index: 2;
 }
-#header #nav {
+#main-block .header #nav {
     display: inline-block;
 }
-#header #nav > li {
+#main-block .header #nav > li {
     display: inline-block;
 }
-#header #nav > li > a {
+#main-block .header #nav > li > a {
     display: block;
     line-height: 46px;
     padding: 0 22px;
     color: white;
     text-transform: uppercase;
 }
-#header #nav li:hover > a {
+#main-block .header #nav li:hover > a {
     background-color: #ccc;
     color: black;
 }
@@ -44,7 +44,7 @@ h3 {font-weight: 100;font-size: 30px;}
 li#more-inf {
     position: relative;
 }
-#header #sub-nav {
+#main-block .header #sub-nav {
     background-color: white;
     position: absolute;
     display: none;
@@ -53,23 +53,23 @@ li#more-inf {
 li#more-inf:hover > #sub-nav {
     display: block;
 }
-#header #sub-nav > li {
+#main-block .header #sub-nav > li {
     display: block;
 }
-#header #sub-nav > li > a {
+#main-block .header #sub-nav > li > a {
     display: block;
     color: black;
     line-height: 42px;
     padding: 0 20px;
 }
-#header #search-btn {
+#main-block .header #search-btn {
     float: right;
     font-size: 17px;
     line-height: 46px;
     padding: 0 28px;
     color: white;
 }
-#header #search-btn:hover {
+#main-block .header #search-btn:hover {
     cursor: pointer;
     background-color: red;
 }
@@ -325,4 +325,110 @@ li#more-inf:hover > #sub-nav {
 }
 #footer #source-text a {
     text-decoration:underline;
+}
+
+/*----------Modal----------*/
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+#modal #container {
+    z-index: 7;
+    margin: 0 16%;
+    background-color: white;
+    animation: effect-open ease 0.5s;
+}
+#modal .header {
+    background-color: #009688;
+    padding: 32px 16px;
+    text-align: center;
+    position: relative;
+}
+#modal .header h1 {
+    display: block;
+    color: white;
+    font-weight: 100;
+    margin: 10px 0;
+}
+#modal #close-btn {
+    padding: 20px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #009688;
+    border-width: 0;
+}
+#modal .content {
+    padding: 16px;
+}
+#modal .content input,
+#modal .content p {
+    display: block;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+#modal .content input {
+    padding: 10px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+}
+
+#modal .content a {
+    text-decoration: underline;
+}
+#modal .content #pay-btn {
+    background-color: #009688;
+    padding: 18px;
+    width: 100%;
+}
+#modal .content #sub-close-btn {
+    background-color: red;
+    padding: 12px 18px;
+}
+#modal .content #more-inf {
+    float: right;
+}
+#modal .content #pay-btn,
+#modal .content #sub-close-btn {
+    border-width: 0;
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+}
+#modal #close-btn:hover,
+#modal .content #pay-btn:hover,
+#modal .content #sub-close-btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #ccc;
+}
+
+@keyframes effect-open {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes effect-close {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
 }

@@ -10,9 +10,8 @@
 
 <body>
     <div id="main-block">
-
         <!--This is Header-->
-        <div id="header">
+        <div class="header">
             <ul id="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#content">Band</a></li>
@@ -120,7 +119,7 @@
                                 <p style="color: grey">Fri 27 Nov 2016</p>
                                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                             </div>
-                            <div class="submit-btn">
+                            <div onclick="openModal()" class="submit-btn">
                                 <p>Buy Tickets</p>
                             </div>
                         </div>
@@ -131,7 +130,7 @@
                                 <p style="color: grey">Sat 28 Nov 2016</p>
                                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                             </div>
-                            <div class="submit-btn">
+                            <div onclick="openModal()" class="submit-btn">
                                 <p>Buy Tickets</p>
                             </div>
                         </div>
@@ -142,7 +141,7 @@
                                 <p style="color: grey">Sun 29 Nov 2016</p>
                                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
                             </div>
-                            <div class="submit-btn">
+                            <div onclick="openModal()" class="submit-btn">
                                 <p>Buy Tickets</p>
                             </div>
                         </div>
@@ -174,7 +173,6 @@
 
             <img id="map-img" src="https://www.w3schools.com/w3images/map.jpg">
         </div>
-
         <div id="footer">
             <div id="icons">
                 <a href="https://www.facebook.com/lvd.11122003"><i class="ti-facebook"></i></a>
@@ -189,8 +187,32 @@
             </div>
         </div>
     </div>
+
+    <div id="modal" onclick="closeModal() " class="hide">
+        <div id="container">
+            <div class="header">
+                <h1><i class="ti-bag"></i> Tickets</h1>
+                <button onclick="closeModal()" id="close-btn"><i class="ti-close"></i></button>
+            </div>
+            <div class="content">
+                <div id="cost">
+                    <p><i class="ti-shopping-cart"></i> Tickets, $15 per person</p>
+                    <input type="text" placeholder="How many?">
+                </div>
+                <div id="email">
+                    <p><i class="ti-email"></i> Send To</p>
+                    <input type="text" placeholder="Enter email">
+                </div>
+                <button id="pay-btn">PAY <i class="ti-check"></i></button>
+                <button onclick="closeModal()" id="sub-close-btn">Close <i class="ti-close"></i></button>
+                <p id="more-inf">Need <a href="https://www.google.com.vn/">help?</a></p>
+            </div>
+        </div>
+    </div>
     <script>
-        let slides = [...document.querySelectorAll(".slide")];
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        let slides = [...$$(".slide")];
 
         setInterval(() => {
             for (let index in slides) {
@@ -206,6 +228,18 @@
                 }
             }
         }, 2000);
+
+        function openModal() {
+            $('#modal').classList.replace("hide", "show");
+        }
+
+        function closeModal() {
+            $('#modal').classList.replace("show", "hide");
+        }
+
+        $("#modal #container").onclick = function(e) {
+            e.stopPropagation();
+        }
     </script>
 </body>
 

@@ -83,8 +83,3 @@
         margin: 10px 10px;
     }
 }
-@media (max-width: 450px) {
-    #contact-block #contact-inf i {
-        padding-right: 10px!important;
-    }
-}

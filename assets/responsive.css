@@ -1,0 +1,85 @@
+@media (max-width: 980px) {
+
+    /*1. Navigation*/
+    #main-block .header {
+        overflow: hidden;
+    }
+
+    #main-block>.header>#search-btn {
+        display: none !important;
+    }
+
+    #main-block .header #nav {
+        display: block;
+    }
+
+    #main-block .header #nav>li:first-child {
+        display: inline-block;
+    }
+
+    #main-block .header #nav>li {
+        display: block;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    #main-block .header #menu-btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .show-mobile-nav {
+        height: auto !important;
+    }
+
+    #main-block #nav li#more-inf {
+        display: none;
+    }
+
+    #main-block .header #nav li:hover>a {
+        display: block;
+    }
+
+    #content #about-band #mem-picture {
+        width: 100%;
+        display: block;
+    }
+
+    #content #mem-picture>div {
+        width: 80%;
+    }
+
+    #content #places-at {
+        display: block;
+    }
+
+    #content #places-at .places {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+
+    #content #places-at .places img {
+        margin-top: 0;
+    }
+
+    #content #places-at .places {
+        height: 680px;
+        margin-top: 50px !important;
+    }
+
+    #contact-block #guest-block #guest-inf {
+        position: initial !important;
+        display: block;
+        width: 100%;
+    }
+    #contact-block #guest-inf input[type="text"] {
+        width: 100%!important;
+    }
+    #contact-block #contact-inf p {
+        display: block;
+        margin: 10px 10px;
+    }
+}

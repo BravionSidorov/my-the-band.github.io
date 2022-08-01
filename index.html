@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Band</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+</head>
+
+<body>
+    <div id="main-block">
+        <!--This is Header-->
+        <div class="header">
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#content">Band</a></li>
+                <li><a href="#booking">Tour</a></li>
+                <li><a href="#contact-block">Contact</a></li>
+                <li id="more-inf">
+                    <a href="#">More <i class="sub-nav-down-icon ti-angle-down"></i></a>
+                    <ul id="sub-nav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MERCH</a></li>
+            </ul>
+
+            <div class="btns-on-nav" id="search-btn">
+                <i class="ti-search"></i>
+            </div>
+            <div class="btns-on-nav" id="menu-btn">
+                <i class="ti-menu"></i>
+            </div>
+        </div>
+
+        <div id="slider">
+            <div class="slide show" id="sli-1">
+                <img src="https://www.w3schools.com/w3images/chicago.jpg" alt="At Chicago">
+                <div class="slogan">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago - A night we won't forget.</p>
+                </div>
+            </div>
+
+            <div class="slide hide" id="sli-2">
+                <img src="https://www.w3schools.com/w3images/ny.jpg" alt="New York">
+                <div class="slogan">
+                    <h3>New York</h3>
+                    <p>The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="slide hide" id="sli-3">
+                <img src="https://www.w3schools.com/w3images/la.jpg" alt="New York">
+                <div class="slogan">
+                    <h3>Los Angeles</h3>
+                    <p>We had the best time playing at Venice Beach!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="content-section" id="about-band">
+                <div id="heading">
+                    <h3>THE BAND</h3>
+                    <i style="color: grey">We love music</i>
+                    <p>
+                        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <div id="mem-picture">
+                    <div>
+                        <label>Name</label>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Picture's Member No.01">
+                    </div>
+                    <div>
+                        <label>Name</label>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Picture's Member No.02">
+                    </div>
+                    <div>
+                        <label>Name</label>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Picture's Member No.03">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" style="background-color: black">
+                <div id="booking">
+                    <div id="heading">
+                        <h3>TOUR DATES</h3>
+                        <i style="color: grey">Remember to book your tickets!</i>
+                    </div>
+                    <div id="slot-inf">
+                        <div class="cont-inf">
+                            <p class="months">September</p>
+                            <p class="status out">Sold out</p>
+                        </div>
+                        <div class="cont-inf">
+                            <p class="months">October</p>
+                            <p class="status out">Sold out</p>
+                        </div>
+                        <div class="cont-inf">
+                            <p class="months">November</p>
+                            <p class="status still">3</p>
+                        </div>
+                    </div>
+                    <div id="places-at">
+                        <div class="places">
+                            <img src="https://www.w3schools.com/w3images/newyork.jpg">
+                            <div class="content">
+                                <p style="font-weight: 600;">New York</p>
+                                <p style="color: grey">Fri 27 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            </div>
+                            <div onclick="openModal()" class="submit-btn">
+                                <p>Buy Tickets</p>
+                            </div>
+                        </div>
+                        <div class="places">
+                            <img src="https://www.w3schools.com/w3images/paris.jpg">
+                            <div class="content">
+                                <p style="font-weight: 600;">Paris</p>
+                                <p style="color: grey">Sat 28 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            </div>
+                            <div onclick="openModal()" class="submit-btn">
+                                <p>Buy Tickets</p>
+                            </div>
+                        </div>
+                        <div class="places">
+                            <img src="https://www.w3schools.com/w3images/sanfran.jpg">
+                            <div class="content">
+                                <p style="font-weight: 600;">San Francisco</p>
+                                <p style="color: grey">Sun 29 Nov 2016</p>
+                                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            </div>
+                            <div onclick="openModal()" class="submit-btn">
+                                <p>Buy Tickets</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="contact-block">
+                <div id="heading">
+                    <h3>CONTACT</h3>
+                    <i style="color: grey">Fan? Drop a note!</i>
+                </div>
+                <div id="guest-block">
+                    <div id="contact-inf">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-headphone-alt"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div id="guest-inf">
+                        <form action="">
+                            <input class="profile" type="text" required placeholder="Name">
+                            <input class="profile" type="text" required placeholder="Email">
+                            <input type="text" required placeholder="Message">
+                            <input type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <img id="map-img" src="https://www.w3schools.com/w3images/map.jpg">
+        </div>
+        <div id="footer">
+            <div id="icons">
+                <a href="https://www.facebook.com/lvd.11122003"><i class="ti-facebook"></i></a>
+
+                <a href="#"><i class="ti-email"></i></a>
+                <a href="#"><i class="ti-twitter-alt"></i></a>
+                <a href="#"><i class="ti-pinterest"></i></a>
+                <a href="#"><i class="ti-youtube"></i></a>
+            </div>
+            <div id="source-text">
+                <p>Powered by <a href="https://www.w3schools.com/">w3.css</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" onclick="closeModal() " class="hide">
+        <div id="container">
+            <div class="header">
+                <h1><i class="ti-bag"></i> Tickets</h1>
+                <button onclick="closeModal()" id="close-btn"><i class="ti-close"></i></button>
+            </div>
+            <div class="content">
+                <div id="cost">
+                    <p><i class="ti-shopping-cart"></i> Tickets, $15 per person</p>
+                    <input type="text" placeholder="How many?">
+                </div>
+                <div id="email">
+                    <p><i class="ti-email"></i> Send To</p>
+                    <input type="text" placeholder="Enter email">
+                </div>
+                <button id="pay-btn">PAY <i class="ti-check"></i></button>
+                <button onclick="closeModal()" id="sub-close-btn">Close <i class="ti-close"></i></button>
+                <p id="more-inf">Need <a href="https://www.google.com.vn/">help?</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
